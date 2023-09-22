@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+  <?php
+  require "link.php";
+  ?>
+  
+</head>
+<body>
+  <body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home"><img src="images/Logo.png" alt="logo" width="150" height="90"></a>
+            </div>
+            <i class="fas fa-bars menu-bar"></i>
+            <nav>
+                <ul>
+                    <li><a href="index.php" >Home</a></li>
+                    <li><a href="service.php"class="active">Services</a></li>
+                    <li><a href="about.php">About Us</a></li>                   
+                    <li><a href="booking.php">Booking</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="service" id="service">
+        <div class="container">
+
+            <h1 class="heading">Our Services</h1>
+        
+            <div class="box-container">
+        
+                <div class="box">
+                    <img src="images/outdoor.jpg" alt="carpet cleaning">
+                    <h3>Indoor/outdoor cleaning</h3>
+                    <p>We provide tailored solutions to all your indoor/outdoor needs.</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+        
+                <div class="box">
+                    <img src="images/home.png" alt="">
+                    <h3>home/office cleaning</h3>
+                    <p>We provide tailored solutions to all your home/office needs.</p><br/><br/>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+        
+                <div class="box">
+                    <img src="images/window.jpg" alt="">
+                    <h3>window cleaning</h3>
+                    <p>We provide tailored solutions to all your windows cleaning needs.</p><br/><br/>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+        
+                <div class="box">
+                    <img src="images/tank.jpg" alt="">
+                    <h3>water tank cleaning</h3>
+                    <p>We provide tailored solutions to all your water tank needs.</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+        
+                <div class="box">
+                    <img src="images/kitchen.jpg" alt="">
+                    <h3>Kitchen cleaning</h3>
+                    <p>We provide tailored solutions to all your kitchen needs.</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+        
+               
+                <div class="box">
+                    <img src="images/painting.jpg" alt="">
+                    <h3>painting services</h3>
+                    <p>We provide tailored solutions to all your painting needs.</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+                <div class="box">
+                    <img src="images/plumbingservices.jpg" alt="">
+                    <h3>plumbing services</h3>
+                    <p>We provide tailored solutions to all your plumbing needs.</p>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+                <div class="box">
+                    <img src="images/sofacleaning.jpg" alt="">
+                    <h3>sofa cleaning services</h3>
+                    <p>We provide tailored solutions to all your sofa cleaning needs.</p><br><br>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+                <div class="box">
+                    <img src="images/parquet_floor_polishing.png" alt="">
+                    <h3>Floor Parquet Polishing</h3>
+                    <p>We provide tailored solutions to all your floor parquet polishing needs.</p><br><br>
+                    <a href="booking.html" class="btn">Book Now</a>
+                </div>
+                
+            </div>
+        
+        </div>
+    </section> 
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About us</a></li>
+                        <li><a href="service.php">Services</a></li>
+                        <li><a href="contact.php">Contact us</a></li>
+                       
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">phone: 9898088123</a></li>
+                        <li><a href="#">Email: smartcleaners@gmail.com</a></li>
+                        <li><a href="#">Adress: Nagarjuna-10,KTM</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+     </footer>
+</body>

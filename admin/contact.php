@@ -1,10 +1,23 @@
+<?php
+if(isset($_GET['error'])){
+    if($_GET['error'] == 1){
+        echo "<script>alert('Empty Field');</script>";
+    }
+    else{
+        echo "<script>alert('Your Message has been sent. The Service Provider contact you later via phone or email.');</script>";
+    }
+}
+require "../connection/connection.php";
+session_start();
+if(!empty($_SESSION['adminloginid'])){
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Cleaners</title>
-  
 </head>
 <body>
     <?php
@@ -19,12 +32,11 @@
             <i class="fas fa-bars menu-bar"></i>
             <nav>
                 <ul>
-                    <li><a href="index.html" >home</a></li>
-                    <li><a href="service.html">services</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="booking.html">booking</a></li>
+                    <li><a href="index.php" >home</a></li>
+                    <li><a href="service.php">services</a></li>
+                    <li><a href="about.php">about</a></li>
+                    <li><a href="booking.php">booking</a></li>
                     <li><a href="contact.php" class="active">contact us</a></li>
-                    
                 </ul>
             </nav>
         </div>
@@ -32,15 +44,17 @@
     <section class="contact" id="contact">
        
             <div class="container">
-                <form action="connect.php" method="post">
+                <form action="../authen/backendresponse.php" onsubmit="return validate()" method="POST">
+                <div id="error_message"></div>
                     <h1>Contact Us </h1>
-                    <input type="text" id="firstName" name="firstname" placeholder="First Name" required>
-                    <input type="text" id="lastName" name="lastname" placeholder="Last Name" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <input type="text" id="mobile" name="mobile" placeholder="Mobile" required>
+                    
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name">
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                    <input type="text" id="mobile" name="mobile" placeholder="Mobile">
                     <h4>Type Your Message Here...</h4>
-                    <textarea name="message" required></textarea>
-                    <input type="submit" value="Send" id="button">
+                    <textarea name="message" id="message" required></textarea>
+                    <input type="submit" onclick="validate()" value="Send" id="button" name="send">
                 </form>
                 </div>
                 
@@ -62,19 +76,17 @@
                 <div class="footer-col">
                     <h4>Quick links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="service.html">Services</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About us</a></li>
+                        <li><a href="service.php">Services</a></li>
                         <li><a href="contact.php">Contact us</a></li>
-                        
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <ul>
                         <li><a href="#">phone: 9898088123</a></li>
-                        <li><a href="#">Email: smartcleaners@gmail.com</a></li>
+                        <li><a href="#">Email: csmscleaners@gmail.com</a></li>
                         <li><a href="#">Adress: Nagarjuna-10,KTM</a></li>
                         <li><a href="#"></a></li>
                     </ul>
@@ -91,8 +103,14 @@
             </div>
         </div>
         <br/><br/>
-        <p><i class="fa-sharp fa-regular fa-copyright fa-beat"></i> Copyright 2023 Smart Cleaners Ltd | All Rights Reserved | Site Inbound</p>
      </footer>
+<?php
+}
+else{
+    header("location:../admin/contact.php");
+}
+?>
+<script src="main.js"></script>
 </body>
 </html>
 
